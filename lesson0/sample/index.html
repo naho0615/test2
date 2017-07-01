@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>phpのPOSTとGET【見本】</title>
+</head>
+<body>
+    <form action="result.php" method="post"> 
+        name:<input type="text" name="name" /><br>
+        pass:<input type="password" name="pass" /><br>
+        <input type="submit" value="送信!" />
+    </form>
+    
+<!-- 
+    ■POSTとGET■
+
+    webブラウザからwebブラウザにデータを送る方法にGETとPOSTがあります。
+    お問い合わせフォームやアンケートのフォーム、掲示板の投稿ページなど、
+    送信ボタンをクリックしてデータを送る場合、POSTメソッドを使用しています。
+
+    逆にリンクにデータを付加して送信する時にはGETメソッドを使います。
+ -->
+
+<!-- 
+    ■webブラウザからwebブラウザにデータを送る■
+
+    まずはformタグを使い、フォームを作ります。
+    データをPOSTメソッドで送信するには、
+        <form action="送る先のファイルパスを指定" method="送る値を指定"> 
+            name:<input type="属性" name="名前" /><br>
+            pass:<input type="属性" name="名前" /><br>
+            <input type="submit" value="表示される値" />
+        </form>
+
+    ■意味■
+    <br>    改行
+    submit  送信
+-->
+
+    <p><a href="result.php?id=12345">click me!</a></p>
+    
+    
+<!-- 
+    ■リンクによるGET送信■
+
+    リンクの中にファイルを指定することでそのベージに遷移しますが、
+    値を引き継ぐ場合にはGET送信を使います。
+
+    今回の場合、?キー＝データという形になってます。
+
+    なので、idは12345ですよ〜というふうにデータを送ってます。
+    受信する時はidを受信すると12345がでるという感じですね！
+-->
+</body>
+</html>
+
